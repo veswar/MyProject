@@ -3,6 +3,7 @@
 ################################################################################
 
 /.vs/Bulky/FileContentIndex/2549a2f1-d835-4c13-b967-a43d308d23f0.vsidx
+<<<<<<< HEAD
 # Created by http://www.gitignore.io
 
 ### VisualStudio ###
@@ -208,3 +209,5 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+=======
+>>>>>>> e4b27ba3ef6087e11a7e69001398614c75471afa
