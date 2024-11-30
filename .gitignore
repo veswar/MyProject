@@ -3,7 +3,6 @@
 ################################################################################
 
 /.vs/Bulky/FileContentIndex/2549a2f1-d835-4c13-b967-a43d308d23f0.vsidx
-<<<<<<< HEAD
 # Created by http://www.gitignore.io
 
 ### VisualStudio ###
@@ -209,7 +208,15 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
-=======
->>>>>>> e4b27ba3ef6087e11a7e69001398614c75471afa
-/.vs/Bulky/FileContentIndex/267b66f0-a202-4a90-aaf8-1452f8263a95.vsidx
-/.vs/Bulky/FileContentIndex/92d4d29c-c3d6-48d4-9675-be2bc75ce31a.vsidx
+/.vs/Bulky/FileContentIndex
+/.vs/Bulky/v17/.suo
+/.vs/Bulky/v17/DocumentLayout.backup.json
+/.vs/Bulky/v17/DocumentLayout.json
+/Bulky.DataAnnotation/bin/Debug/net8.0/BulkyBook.DataAccess.dll
+/Bulky.DataAnnotation/bin/Debug/net8.0/BulkyBook.DataAccess.pdb
+/Bulky.DataAnnotation/obj/Debug/net8.0/ref/BulkyBook.DataAccess.dll
+/Bulky.DataAnnotation/obj/Debug/net8.0/refint/BulkyBook.DataAccess.dll
+/BulkyWeb/obj/Debug/net8.0/staticwebassets/msbuild.BulkyBookWeb.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+/BulkyWeb/obj/Debug/net8.0/staticwebassets/msbuild.BulkyBookWeb.Microsoft.AspNetCore.StaticWebAssets.props
+/BulkyWeb/obj/Debug/net8.0/ref/BulkyBookWeb.dll
+/BulkyWeb/obj/Debug/net8.0/refint/BulkyBookWeb.dll
