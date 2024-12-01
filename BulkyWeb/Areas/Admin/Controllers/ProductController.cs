@@ -1,10 +1,14 @@
 ﻿using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Model.Models;
+using BulkyBook.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BulkyBookWeb.Areas.Admin.Controllers
 {
+    [Area("Admin")]
+    [Authorize(Roles ="Admin")]
     public class ProductController : Controller
     {
         internal readonly IUnitOfWork _unitOfWork;
@@ -14,6 +18,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             _unitOfWork = unitOfWork;
             _webHostEnvironment = webHostEnvironment;
         }
+        
         public IActionResult Index()
         {
             List<Product> products = _unitOfWork.product.All().ToList();
@@ -21,7 +26,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             return View(products);
         }
         public IActionResult Upsert(int? id)
-       {
+        {
             ProductModel product = new()
             {
                 Categories = _unitOfWork.category.All()

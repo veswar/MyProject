@@ -13,6 +13,7 @@ namespace BulkyBook.DataAccess.Repository
         public ICategoryRepository category { get; private set; }
 
         public IProductRepository product { get; private set; }
+        public IShopingCartRepository shopingCart { get; private set; }
 
         internal readonly ApplicationDbContext _context;
         public UnitOfWork(ApplicationDbContext context)
@@ -20,6 +21,7 @@ namespace BulkyBook.DataAccess.Repository
             _context = context;
             category = new CategoryRepository(_context);
             product = new ProductRepository(_context);
+            shopingCart = new ShopingCartRepository(_context);
         }
         public void Save()
         {

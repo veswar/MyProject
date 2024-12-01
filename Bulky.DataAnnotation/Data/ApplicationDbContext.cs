@@ -13,9 +13,12 @@ namespace BulkyBook.DataAccess.Data
         }
         public DbSet<Category> Category { get; set; }
         public DbSet<Product> Product { get; set; }
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
+        public DbSet<ShopingCart> ShopingCart { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Category>().HasData(
                 new Category { Id = 1, Name = "action", DisplayOrder = 1, },
                 new Category { Id = 2, Name = "scifi", DisplayOrder = 2, },
