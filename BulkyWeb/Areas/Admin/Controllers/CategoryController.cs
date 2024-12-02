@@ -15,7 +15,7 @@ namespace BulkyBookWeb.Controllers
         }
         public IActionResult Index()
         {
-            List<Category> categories = _unitOfWork.category.All().ToList();
+            List<Category> categories = _unitOfWork.category.GetAll().ToList();
             return View(categories);
         }
         [HttpGet]

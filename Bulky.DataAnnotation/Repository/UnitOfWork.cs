@@ -14,6 +14,9 @@ namespace BulkyBook.DataAccess.Repository
 
         public IProductRepository product { get; private set; }
         public IShopingCartRepository shopingCart { get; private set; }
+        public IApplicationUserRepository applicationUser { get; private set; }
+        public IOrderDetailsRepository orderDetails { get; private set; }
+        public IOrderHeaderRepository orderHeader { get; private set; }
 
         internal readonly ApplicationDbContext _context;
         public UnitOfWork(ApplicationDbContext context)
@@ -22,6 +25,9 @@ namespace BulkyBook.DataAccess.Repository
             category = new CategoryRepository(_context);
             product = new ProductRepository(_context);
             shopingCart = new ShopingCartRepository(_context);
+            applicationUser = new ApplicationUserRepository(_context);
+            orderDetails = new OrderDetailsRepository(_context);
+            orderHeader = new OrderHeaderRepository(_context);
         }
         public void Save()
         {

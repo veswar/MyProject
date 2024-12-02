@@ -4,22 +4,21 @@ using BulkyBook.Model.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BulkyBook.DataAccess.Repository
 {
-    public class ShopingCartRepository : Repository<ShopingCart>, IShopingCartRepository
+    public class OrderDetailsRepository : Repository<OrderDetail>, IOrderDetailsRepository
     {
         readonly ApplicationDbContext _context;
-        public ShopingCartRepository(ApplicationDbContext context) : base(context)
+        public OrderDetailsRepository(ApplicationDbContext context) : base(context)
         {
             _context = context;
         }
-        void IShopingCartRepository.Update(ShopingCart shopingCart)
+        public void Update(OrderDetail orderDetail)
         {
-            _context.Update(shopingCart);
+            _context.Update(orderDetail);
         }
     }
 }

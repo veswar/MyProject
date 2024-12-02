@@ -21,7 +21,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
         
         public IActionResult Index()
         {
-            List<Product> products = _unitOfWork.product.All().ToList();
+            List<Product> products = _unitOfWork.product.GetAll().ToList();
 
             return View(products);
         }
@@ -29,7 +29,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
         {
             ProductModel product = new()
             {
-                Categories = _unitOfWork.category.All()
+                Categories = _unitOfWork.category.GetAll()
               .Select(d => new SelectListItem
               {
                   Text = d.Name,
@@ -86,7 +86,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             ProductModel productModel = new()
             {
                 Product = _unitOfWork.product.Get(d => d.Id == id),
-                Categories = _unitOfWork.category.All()
+                Categories = _unitOfWork.category.GetAll()
               .Select(d => new SelectListItem
               {
                   Text = d.Name,
@@ -111,7 +111,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             ProductModel productModel = new()
             {
                 Product = _unitOfWork.product.Get(d => d.Id == id),
-                Categories = _unitOfWork.category.All()
+                Categories = _unitOfWork.category.GetAll()
               .Select(d => new SelectListItem
               {
                   Text = d.Name,
@@ -136,7 +136,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            List<Product> products = _unitOfWork.product.All().ToList();
+            List<Product> products = _unitOfWork.product.GetAll().ToList();
 
             return Json(new { data = products });
         }
